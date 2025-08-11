@@ -28,6 +28,9 @@
                         </ul>
                         </nav>
              </header>
+             {% extends "base.html" %}
+             {% block title %}Homepage{% endblock %}
+             {% block content %}
              <main class="container">
                 <p>This is the homepage for our restaurant</p>
                 <p>Use the navgation above to get started.</p>
@@ -44,6 +47,7 @@
                             </ul>
                             </section>
                             </main>
+                            {% endblock %}
                             <footer class="footer">
                                 <p>&copy; 2025 {{restaurant_name}}</p>
                             </footer>
