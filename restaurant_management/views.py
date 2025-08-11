@@ -17,3 +17,5 @@ def home(request):
         return render(request,'restaurant_management/about.html')
         def contact(request):
             return render(request,'restaurant_management/contact.html')
+            def reservations(request):
+                return render(request,'restaurant_management/reservations.html')
