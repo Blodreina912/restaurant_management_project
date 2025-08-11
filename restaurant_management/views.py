@@ -9,7 +9,7 @@ def home(request):
             }
             except Restaurant.DoesNotExist:
                 context={
-                    'restaurant_name': 'Default Restaurant Name',
+                    'restaurant_name': 'My Awesome Restaurant',
                     'restaurant_phone': 'N/A',
                 }
     return render(request,'restaurant_management/home.html',context)
