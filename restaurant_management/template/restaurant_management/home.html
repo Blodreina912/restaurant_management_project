@@ -62,6 +62,10 @@
                             {% endblock %}
                             <footer class="footer">
                                 <p>&copyright; 2025 {{restaurant_name}}</p>
+                                <p>
+                                   &copy;{% now "Y" %} Restaurant Management System
+                                </p>
+                                <p>Hours: {{restaurant_hours}}</p>
                             </footer>
         </body>
     </html>
