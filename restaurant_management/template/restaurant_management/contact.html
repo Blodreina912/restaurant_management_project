@@ -11,4 +11,17 @@
             </div>
             </div>
             </main>
+            <script>
+                function validateContactForm()
+                {
+                const name= document.getElementById('name').value.trim();
+                const email= document.getElementById('email').value.trim();
+                if(name===""|| email === "")
+                {
+                alert("Name and email fields are required");
+                return false;
+                }
+                return true;
+                }
+                </script>
             {% endblock %}
