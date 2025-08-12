@@ -7,4 +7,6 @@ urlpatterns=[
     path('contact/',views.contact,name='contact'),
     path('reservations/',views.reservations,name='reservaions'),
     path('search/', views.search_results,name='search'),
+    path('feedback/', views.feedback_view,name='feedback'),
+    path('feedback/success/', views. feedback_success,name='feedback_success'),
 ]
