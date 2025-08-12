@@ -1,0 +1,5 @@
+<form method="post" action="{% url 'feedback' %}">
+    {% crsf_token %}
+    {{ form.as_p}}
+    <buton type="submit">SUBMIT FEEDBACK</button>
+    </form>
