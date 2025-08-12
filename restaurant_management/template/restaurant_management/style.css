@@ -24,6 +24,18 @@ body{
     margin: auto;
     transition: transform 0.3s ease;
 }
+nav ul{
+    list-style-type: none;
+    padding:0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+nav a{
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
 .error-content:hover
 {transform:translateY(-5px)}
 .error-content h1{
