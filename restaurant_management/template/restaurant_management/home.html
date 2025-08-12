@@ -31,6 +31,12 @@
              {% extends "base.html" %}
              {% block title %}Homepage{% endblock %}
              {% block content %}
+             <header>
+                <div class="header-content">
+                    <img src={% static ''%} alt="Restaurant Logo Image">
+                    <h1>Welcome to {{ restaurat_name}}!</h1>
+                    </div>
+                    </header>
              <main class="container">
                 <p>This is the homepage for our restaurant</p>
                 <p>Use the navgation above to get started.</p>
