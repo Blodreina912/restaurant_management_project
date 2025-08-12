@@ -10,3 +10,12 @@ class Restaurant(models.Model):
             price = models.DecimalField(max_digits=6,decimal_places=2)
             def__str__(self):
                 return self.name
+class Order(models.Model):
+    STATUS_CHOICES=(
+        ('pending','Pending'),
+        ('processing','Processing'),
+        ('completed','Completed'),
+        ('cancelled','Cancelled'),
+    )
+    def__str__(self):
+        return f"Order #{self.pk} by {self.customer.username}"
