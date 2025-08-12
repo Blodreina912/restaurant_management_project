@@ -35,3 +35,7 @@ def menu(request):
             return render(request,'restaurant_management/contact.html')
             def reservations(request):
                 return render(request,'restaurant_management/reservations.html')
+                def search_results(request):
+                    query= request.GET.get('q')
+                    context={'query': query}
+                    return render(request,'restaurant_management/search_results.html',context)
