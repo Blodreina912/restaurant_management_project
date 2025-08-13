@@ -30,6 +30,12 @@ def menu(request):
         }
         return render(request,'restaurant_management/menu.html',context)
     return render(request,'restaurant_management/home.html',context)
+def menu_views(request):
+    menu_items= MenuItem.objects.all()
+    context={
+        'menu_items': menu_items
+    }
+    return render(request,'restaurant_management/menu.html',context)
     def about(request):
         return render(request,'restaurant_management/about.html')
         def contact(request):
