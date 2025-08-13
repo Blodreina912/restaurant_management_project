@@ -103,6 +103,15 @@
                                             </div>
                                             </div>
                                             </section>
+                                    <main class="container">
+                                        <header>
+                                            <h1>WELCOME TO {{ restaurat_name}}</h1>
+                                            {% if restaurant_address %}
+                                            <p><strong>VISIT US AT:</strong>{{restaurant_address}}</p>
+                                            {% endif %}
+                                            </header>
+                                            </main>
+                                            {% endblock %}
                             <footer class="footer">
                                 <p>&copyright; 2025 {{restaurant_name}}</p>
                                 <p>
