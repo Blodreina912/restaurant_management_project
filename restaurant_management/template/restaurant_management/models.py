@@ -12,6 +12,12 @@ class Restaurant(models.Model):
             image= models.ImageField(upload_to='menu_items/', blank=True,null=True)
             def__str__(self):
                 return self.name
+                class ContactSubmission(models.Model):
+                    name= models.CharField(max_length=100)
+                    emsil= models.EmailField()
+                    submitted_at=models.DataTimeField(auto_now_add=True)
+                    def__str__(self):
+                        return f"Submission by{self.name} on {self.submitted_at.strftime('%Y-%m-%d')}"
 class Order(models.Model):
     STATUS_CHOICES=(
         ('pending','Pending'),
