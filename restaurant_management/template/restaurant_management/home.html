@@ -72,6 +72,17 @@
                             </ul>
                             </section>
                             </main>
+                            <main>
+                                <section class="contact-form-section">
+                                  <h2>CONTACT US</h2>
+                                  <p>Leave your name and email,and we'll get back to you!</p>
+                                  <form method="post" action={% url 'contact_form_view' %}>
+                                    {{% csrf_token%}}
+                                    {{ form.as_p}}
+                                    <button type="submit">SUBMIT</button>
+                                    </form>
+                                    </section>
+                                    </main>
                             {% endblock %}
                             <footer class="footer">
                                 <p>&copyright; 2025 {{restaurant_name}}</p>
