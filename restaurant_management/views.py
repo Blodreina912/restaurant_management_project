@@ -8,13 +8,17 @@ def home(request):
         restaurant= Restaurant.objects.get(pk=1)
         context ={
             'restaurant_name': restaurant.name,
-            'restaurant_phone': restaurant.phone_number,
+            'restaurant_phone': restaurant.phone.number,
+            'rstaurant_address': restaurant.address,
             }
             except Restaurant.DoesNotExist:
                 context={
                     'restaurant_name': 'My Awesome Restaurant',
                     'restaurant_phone': 'N/A',
-                }
+                    'restaurant_address': 'Address not Available',
+                    }
+            return render(request,'restaurant+management/home.html',context)
+                
 def menu(request):
     try:
         menu_items= MenuItem.objects.all()
