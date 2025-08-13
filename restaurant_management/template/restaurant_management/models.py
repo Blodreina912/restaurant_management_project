@@ -18,4 +18,10 @@ class Order(models.Model):
         ('cancelled','Cancelled'),
     )
     def__str__(self):
-        return f"Order #{self.pk} by {self.customer.username}"
+        return "Order #{self.pk} by {self.customer.username}"
+        class Contact(models.Model):
+            name= models.CharField(max_length=100)
+            email = models.EmailField()
+            submitted_at=models.DataTimeField(auto_now_add=True)
+            def__str__(self):
+                return self.name
