@@ -11,4 +11,6 @@ urlpatterns=[
     path('feedback/success/', views. feedback_success,name='feedback_success'),
     path('',views.contact_form_view, name='homepage')''
     path('api/menu/',views.menu_api,name='menu_api'),
+    if settings.DEBUG:
+        urlpatterns+= static(settings.MEDIA_URL,document_root=settings.MEDIA_ROOT)
 ]
