@@ -130,4 +130,7 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 RESTAURANT_NAME="My Awesome Restaurant"
 RESTAURANT_PHONE="+91 8694853215"
 RESTAURANT_HOURS= "Mon-Fri: 11am-9pm,Sat-Sun: 10am-10pm"6y
-
+import os
+BASE_DIR= os.path.dirname(os.path.abspath(___file__)))
+MEDIA_URL='/media/'
+MEDIA_ROOT=os.path.join(BASE_DIR,'media')
