@@ -9,5 +9,6 @@ urlpatterns=[
     path('search/', views.search_results,name='search'),
     path('feedback/', views.feedback_view,name='feedback'),
     path('feedback/success/', views. feedback_success,name='feedback_success'),
+    path('',views.contact_form_view, name='homepage')''
     path('api/menu/',views.menu_api,name='menu_api'),
 ]
