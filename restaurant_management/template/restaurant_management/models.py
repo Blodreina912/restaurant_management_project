@@ -2,6 +2,7 @@ from django.db import models
 class Restaurant(models.Model):
     name= models.CharField(max_length=200)
     phone_name= models.CharField(max_length=20)
+    opening_hours= models.Charfiedl(max_length=255,blank=True,null=True)
     def__str__(self):
         return self.name
         class MenuItem(models.Model):
