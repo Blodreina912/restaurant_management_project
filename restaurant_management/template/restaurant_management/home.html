@@ -95,6 +95,7 @@
                                     </section>
                                     </main>
                             {% endblock %}
+
                             <section class="location-section">
                                 <h2>FIND US HERE</h2>
                                 <div class="location-container">
@@ -114,10 +115,19 @@
                                             </div>
                                             </div>
                                             </section>
+                    
+
                                     <main class="container">
                                         <header>
                                             <h1>WELCOME TO {{ restaurat_name}}</h1>
-                                            {% if restaurant_address %}
+        <div clas="search-bar-container"> 
+            <form action="{% url 'search' %}" method="get">
+    <input type="text" name="q" placeholder="Search menu items....">
+     <button type="submit" class="search-button">SEARCH</button>
+     </form>
+     </div>
+     </main>
+                                    {% if restaurant_address %}
                                             <p><strong>VISIT US AT:</strong>{{restaurant_address}}</p>
                                             {% endif %}
                                             </header>
