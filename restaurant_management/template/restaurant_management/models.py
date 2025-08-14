@@ -3,6 +3,7 @@ class Restaurant(models.Model):
     name= models.CharField(max_length=200)
     phone_name= models.CharField(max_length=20)
     opening_hours= models.Charfiedl(max_length=255,blank=True,null=True)
+    zip_code= models.CharField(max_length=10)
     def__str__(self):
         return self.name
         class MenuItem(models.Model):
