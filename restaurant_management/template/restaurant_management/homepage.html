@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang='en'>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <title>RESTAURANT HOMEPAGE</title>
+        </head>
+        <body>
+            <h1>WELCOME TO OUR RESTAURANT</h1>
+            {% if restaurant %}
+            <div class="restaurant-address">
+                <h2>OUR LOCATION</h2>
+                <p>{{restaurant.street_address}}</p>
+                <p>{{restaurant.city}}{{restaurant.state}}{{restaurant.zip_code}}</p>
+                </div>
+                {% else %}
+                <p>ADDRESS INFORMATION IS NOT AVAILABLE</p>
+                {% endif %}
+                </body>
+                </html>
