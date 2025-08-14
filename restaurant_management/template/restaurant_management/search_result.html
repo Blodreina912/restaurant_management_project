@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+{% block title %}Search Result{% endblock %}
+{% block content %}
+<main class="container">
+    <h2>SEARCH RESULT for"{{query}}"</h2>
+    {% if menu_items %}
+    <div class="menu-grid">
+        {% if menu_items %}
+        <div class="menu-grid">
+            {% for item in menu_items %}
+            <div class="menu-item">
+                <h3>{{item.name}}</h3>
+                <p class="description">{{ item.description}}</p>
+<p class="price">${{ item.price }}</p>
+</div>
+{% endfor %}
+</div>
+{% else %}
+<p>NO MENU ITEMS FOUND FOR YOUR SEARCH</p>
+{% endif %}
+</main>
+{% endblock %}
