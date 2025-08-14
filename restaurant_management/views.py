@@ -10,14 +10,16 @@ def home(request):
             'restaurant_name': restaurant.name,
             'restaurant_phone': restaurant.phone.number,
             'rstaurant_address': restaurant.address,
+            'opening_hours': restaurant.opening_hours,
             }
             except Restaurant.DoesNotExist:
                 context={
                     'restaurant_name': 'My Awesome Restaurant',
                     'restaurant_phone': 'N/A',
+                    'opening_hours': 'HOURS NOT Available.',
                     'restaurant_address': 'Address not Available',
                     }
-            return render(request,'restaurant+management/home.html',context)
+            return render(request,'restaurant_management/home.html',context)
                 
 def menu(request):
     try:
