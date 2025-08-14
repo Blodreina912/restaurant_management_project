@@ -51,6 +51,17 @@
                     </div>
                     </header>
              <main class="container">
+                <header>
+                    <h1>WELCOME TO{{restaurant_name}}!</h1>
+                     {% if restaurant_address %}
+                    <p><strong>Visit us at:</strong>{{restaurant_address}}</p>
+                    {% endif %}
+                    {% if opening_hours %}
+                    <p><strong>Hours:</strong>{{opening_hours}}</p>
+                    {% endif %}
+                    </header>
+                    </main>
+                    {% endblock %}
                 <div class="search-bar-container">
                     <form action="/search/" method="get">
                     <input type="text" name="q" placeholder="Search menu items...."class="search-input">
