@@ -3,6 +3,25 @@ from .forms import ContactForm
 from .models import Restaurant
 from .models import DatabaseError
 from .models import MenuItem
+def contact_view(request):
+    if request.method=='POST'
+    form= ContactForm(request.POST)
+    if form.is_valid():
+        name = form.cleaned_data['name']
+        name = form.cleaned_data['email']
+        name = form.cleaned_data['message']
+        subject=f'New message from{name}'
+        body= f'Name: {name}\nEmail: {email}\n\nMESSAGE:\n{message}'
+        from_email= settings.EMAIL_HOST_USER
+        recipient_list=['restaurant_email@example.com']
+        send_mail(subject,body,from_email,recipient_list)
+        return redirect('contact_success')
+        else:
+            form= ContactForm()
+        return render(request,'contact.html',{'form': form})
+        def contact_success_view(request):
+            return render(request,'contact_success.html')
+            
 def home(request):
     try:
         restaurant= Restaurant.objects.get(pk=1)
