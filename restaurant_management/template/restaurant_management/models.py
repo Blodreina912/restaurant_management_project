@@ -11,7 +11,7 @@ class Restaurant(models.Model):
             address= models.CharField(max_length=255,blank=True, null=True)
             description= models.TextField()
             price = models.DecimalField(max_digits=6,decimal_places=2)
-            image= models.ImageField(upload_to='menu_items/', blank=True,null=True)
+            image= models.ImageField(upload_to='menu_images/', blank=True,null=True)
             def__str__(self):
                 return self.name
                 class ContactSubmission(models.Model):
