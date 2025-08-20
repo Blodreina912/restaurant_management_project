@@ -28,7 +28,8 @@ def home(request):
         context ={
             'restaurant_name': restaurant.name,
             'restaurant_phone': restaurant.phone.number,
-            'rstaurant_address': restaurant.address,
+            'restaurant_logo': restaurant.logo,
+            'restaurant_address': restaurant.address,
             'opening_hours': restaurant.opening_hours,
             }
             except Restaurant.DoesNotExist:
@@ -36,6 +37,7 @@ def home(request):
                     'restaurant_name': 'My Awesome Restaurant',
                     'restaurant_phone': 'N/A',
                     'opening_hours': 'HOURS NOT Available.',
+                    'restaurant_logo': None,
                     'restaurant_address': 'Address not Available',
                     }
             return render(request,'restaurant_management/home.html',context)
