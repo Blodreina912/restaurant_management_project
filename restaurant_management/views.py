@@ -73,7 +73,7 @@ def menu_views(request):
                     query= request.GET.get('q')
                     context={'query': query}
                     return render(request,'restaurant_management/search_results.html',context)
-           def conatact_form_view(request):
+           def contact_form_view(request):
             if request.method == 'POST':
                 form = ContactForm(request.POST)
                 if form.is_valid():
@@ -82,4 +82,5 @@ def menu_views(request):
                     else:
                         form=ContactForm()
                         return render(request,'homepage.html',{'form': form})
-                        
+          def about(request):
+            return render(request,'restaurant_management/about.html')              
