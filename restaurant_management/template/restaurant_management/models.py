@@ -2,6 +2,7 @@ from django.db import models
 class Restaurant(models.Model):
     name= models.CharField(max_length=200)
     phone_name= models.CharField(max_length=20)
+    logo = models.InafeField(upload_to='logos/', blabk= True,null= True)
     opening_hours= models.Charfiedl(max_length=255,blank=True,null=True)
     zip_code= models.CharField(max_length=10)
     def__str__(self):
