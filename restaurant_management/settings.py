@@ -129,7 +129,7 @@ STATIC_URL = 'static/'
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 RESTAURANT_NAME="My Awesome Restaurant"
 RESTAURANT_PHONE="+91 8694853215"
-RESTAURANT_HOURS= "Mon-Fri: 11am-9pm,Sat-Sun: 10am-10pm"6y
+RESTAURANT_HOURS= "Mon-Fri: 11am-9pm,Sat-Sun: 10am-10pm"
 import os
 BASE_DIR= os.path.dirname(os.path.abspath(___file__)))
 MEDIA_URL='/media/'
